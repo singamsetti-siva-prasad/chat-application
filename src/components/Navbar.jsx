@@ -10,11 +10,12 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full h-10vh flex justify-between items-center bg-blue p-2">
+    <div className="w-full h-10vh flex justify-between items-center  bg-secondary p-2">
       <div className="flex items-center justify-between  w-full">
-        <h1 className="w-1/3 text-lg font-bold text-black md:text-sm md:hidden ">
-          Let's Chat
-        </h1>
+        <img
+          className="w-1/2 h-10 object-contain md:hidden"
+          src="src/images/logo-black.png "
+        />
         <div className="flex justify-around items-center w-2/3">
           <div className="flex items-center">
             <img
@@ -26,7 +27,7 @@ const Navbar = () => {
             </span>
           </div>
           <button
-            className="bg-slate-600 rounded-lg px-2 h-8 text-xs font-medium"
+            className="bg-button rounded-lg px-2 h-8 text-xs font-medium"
             onClick={handleClick}
           >
             Log out

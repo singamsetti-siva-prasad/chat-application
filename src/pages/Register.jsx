@@ -83,13 +83,14 @@ const Register = () => {
   };
 
   return (
-    <div className="w-screen h-screen flex items-center justify-center bg-secondary">
+    <div className="w-screen h-screen flex items-center justify-center bg-gray">
       <div className="w-2/4 h-2/3 md:h-4/5 md:w-4/5  ">
-        <div className="w-full h-full flex flex-col justify-around bg-gray rounded-lg">
-          <div className="flex flex-col ">
-            <h1 className="font-bold text-center text-2xl text-navy md:text-xl">
-              Let's chat
-            </h1>
+        <div className="w-full h-full flex flex-col justify-around bg-primary rounded-lg p-1">
+          <div className="flex flex-col items-center">
+            <img
+              className="w-1/2 h-10 object-contain"
+              src="src/images/logo-transparent-green.png "
+            />
             <p className="font-bold text-center text-lg md:text-sm">Register</p>
 
             {haserror && (

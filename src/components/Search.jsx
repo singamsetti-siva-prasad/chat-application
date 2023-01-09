@@ -88,7 +88,7 @@ const Search = () => {
     <div className="w-full">
       <input
         placeholder="search conversation"
-        className="w-full px-2 py-1 placeholder:text-sm placeholder:font-light placeholder:text-gray "
+        className="w-full px-2 py-1 placeholder:text-sm placeholder:font-light placeholder:text-navy "
         value={username}
         onKeyDown={handleKey}
         onChange={handleChange}

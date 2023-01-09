@@ -36,11 +36,11 @@ const Chats = () => {
         ?.sort((a, b) => b[1].date - a[1].date)
         .map((chat) => (
           <div
-            className="w-full h-10vh border-b-2 border-green-100"
+            className="w-full h-10vh border-b-2 border-lightBlack"
             key={chat[0]}
             onClick={() => handleSelect(chat[1].userInfo)}
           >
-            <div className="w-full h-full flex bg-slate-300 items-center p-2 hover:bg-slate-500">
+            <div className="w-full h-full flex bg-chats items-center p-2 hover:bg-slate-200">
               <img
                 src={chat[1].userInfo.photoURL}
                 className="w-12 h-12 rounded-full object-cover"

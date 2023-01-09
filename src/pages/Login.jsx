@@ -40,13 +40,14 @@ const Login = () => {
   };
 
   return (
-    <div className="w-screen h-screen flex items-center justify-center  bg-secondary">
+    <div className="w-screen h-screen flex items-center justify-center  bg-gray">
       <div className="w-2/4 h-2/4 md:w-4/5">
-        <div className="w-full h-full flex flex-col justify-evenly  bg-gray rounded-lg">
-          <div className="flex-4 h-1/4 flex flex-col justify-around">
-            <h1 className="font-bold text-center text-2xl text-navy md:text-xl">
-              Let's chat
-            </h1>
+        <div className="w-full h-full flex flex-col justify-evenly  bg-primary rounded-lg p-1">
+          <div className="flex-4 h-1/4 flex flex-col justify-around items-center ">
+            <img
+              className="w-1/2 h-10 object-contain"
+              src="src/images/logo-transparent-green.png "
+            />
             <p className="font-bold text-center text-lg md:text-sm">Login</p>
             {haserror && (
               <span className="text-center text-red-600 ">

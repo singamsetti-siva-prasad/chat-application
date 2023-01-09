@@ -15,9 +15,7 @@ const ConversationNav = () => {
             src={data.user?.photoURL}
             className="w-12 h-12 md:w-8 md:h-8 rounded-full object-cover mr-2"
           />
-          <h1 className="font-bold text-xl md:text-sm">
-            {data.user?.displayName}
-          </h1>
+          <h1 className="font-bold  md:text-sm">{data.user?.displayName}</h1>
         </div>
         <CancelOutlinedIcon onClick={() => setActive(false)} />
       </div>

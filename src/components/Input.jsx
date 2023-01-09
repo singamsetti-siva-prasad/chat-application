@@ -86,7 +86,7 @@ const Input = () => {
           <img src="src/images/add-file.png" alt="" className=" mr-2 h-8 w-8" />
         </label>
         <button
-          className="px-2 h-8 w-12 bg-slate-600 rounded-lg text-center text-xs font-medium"
+          className="px-2 h-8 w-12 bg-button rounded-lg text-center text-xs font-medium"
           onClick={handleSend}
         >
           Send

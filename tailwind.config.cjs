@@ -22,12 +22,14 @@ module.exports = {
       },
 
       colors: {
-        gray: "#A3C7D6",
+        gray: "#E8F9FD",
         navy: "#0A2647",
-        cream: "#F7F5EB",
         blue: "#144272",
+        primary: "#CFFDE1",
         secondary: "#2C74B3",
         lightBlack: " #999999",
+        chats: "#FDFAF6",
+        button: "#9CB4CC",
       },
     },
     screens: {
