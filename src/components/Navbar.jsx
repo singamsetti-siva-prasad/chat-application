@@ -14,7 +14,7 @@ const Navbar = () => {
       <div className="flex items-center justify-between  w-full">
         <img
           className="w-1/2 h-10 object-contain md:hidden"
-          src="src/images/logoBlack.png "
+          src="src/images/logoblack.png "
         />
         <div className="flex justify-around items-center w-2/3">
           <div className="flex items-center">

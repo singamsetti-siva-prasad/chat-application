@@ -87,7 +87,7 @@ const Register = () => {
           <div className="flex flex-col items-center">
             <img
               className="w-1/2 h-10 object-contain"
-              src="src/images/logoGreen.png "
+              src="src/images/logogreen.png "
             />
             <p className="font-bold text-center text-lg md:text-sm">Register</p>
 

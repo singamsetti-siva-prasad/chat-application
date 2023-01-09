@@ -44,7 +44,7 @@ const Login = () => {
           <div className="flex-4 h-1/4 flex flex-col justify-around items-center ">
             <img
               className="w-1/2 h-10 object-contain"
-              src="src/images/logoGreen.png "
+              src="src/images/logogreen.png "
             />
             <p className="font-bold text-center text-lg md:text-sm">Login</p>
             {haserror && (
