@@ -84,13 +84,13 @@ const Register = () => {
 
   return (
     <div className="w-screen h-screen flex items-center justify-center bg-secondary">
-      <div className="w-2/4 h-2/3  ">
+      <div className="w-2/4 h-2/3 md:h-4/5 md:w-4/5  ">
         <div className="w-full h-full flex flex-col justify-around bg-gray rounded-lg">
           <div className="flex flex-col ">
-            <h1 className="font-bold text-center text-2xl text-navy">
+            <h1 className="font-bold text-center text-2xl text-navy md:text-xl">
               Let's chat
             </h1>
-            <p className="font-bold text-center text-lg">Register</p>
+            <p className="font-bold text-center text-lg md:text-sm">Register</p>
 
             {haserror && (
               <span className="decoration-solid text-blue">
@@ -110,7 +110,7 @@ const Register = () => {
                     type="text"
                     id="userName"
                     name="userName"
-                    className="p-2 rounded-lg w-1/3 "
+                    className="p-2 rounded-lg w-2/5  md:w-3/4 placeholder:text-[12px] "
                     placeholder="User name"
                   />
                   <ErrorMessage name="email" component={TextError} />
@@ -118,7 +118,7 @@ const Register = () => {
                     type="email"
                     id="email"
                     name="email"
-                    className="p-2 rounded-lg w-1/3 "
+                    className="p-2 rounded-lg w-2/5 md:w-3/4 placeholder:text-[12px] "
                     placeholder="Enter email"
                   />
                   <ErrorMessage name="email" component={TextError} />
@@ -126,7 +126,7 @@ const Register = () => {
                     type="password"
                     id="password"
                     name="password"
-                    className="p-2 rounded-lg w-1/3 "
+                    className="p-2 rounded-lg w-2/5 md:w-3/4 placeholder:text-[12px] "
                     placeholder="Enter password"
                   />
                   <ErrorMessage name="email" component={TextError} />
@@ -134,7 +134,7 @@ const Register = () => {
                     type="file"
                     id="file"
                     accept=".jpg, .png"
-                    className="p-2 rounded-lg w-1/3 "
+                    className="p-2 rounded-lg w-2/5 md:w-3/4 placeholder:text-[12px]"
                     onChange={(e) => {
                       formik.setFieldValue("file", e.target.files[0]);
                     }}
@@ -142,7 +142,7 @@ const Register = () => {
                   <button
                     type="submit"
                     disabled={!formik.isValid || formik.isSubmitting}
-                    className="p-3 font-bold bg-navy text-white rounded-lg w-1/3 cursor-pointer "
+                    className="p-3 font-bold bg-navy text-white rounded-lg w-2/5 cursor-pointer text-xs "
                   >
                     Sign Up
                   </button>
@@ -151,7 +151,7 @@ const Register = () => {
             }}
           </Formik>
 
-          <p className="text-center">
+          <p className="text-center md:text-sm">
             Already have an account?{" "}
             <Link to="/login" className="underline decoration-solid">
               Login

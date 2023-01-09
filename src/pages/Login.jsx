@@ -41,13 +41,13 @@ const Login = () => {
 
   return (
     <div className="w-screen h-screen flex items-center justify-center  bg-secondary">
-      <div className="w-2/4 h-2/4">
+      <div className="w-2/4 h-2/4 md:w-4/5">
         <div className="w-full h-full flex flex-col justify-evenly  bg-gray rounded-lg">
           <div className="flex-4 h-1/4 flex flex-col justify-around">
-            <h1 className="font-bold text-center text-2xl text-navy">
+            <h1 className="font-bold text-center text-2xl text-navy md:text-xl">
               Let's chat
             </h1>
-            <p className="font-bold text-center text-lg">Login</p>
+            <p className="font-bold text-center text-lg md:text-sm">Login</p>
             {haserror && (
               <span className="text-center text-red-600 ">
                 Something went wrong
@@ -66,7 +66,7 @@ const Login = () => {
                     type="email"
                     id="email"
                     name="email"
-                    className="p-2 rounded-lg w-1/3"
+                    className="p-2 rounded-lg w-1/2 md:w-2/3 placeholder:text-[12px]"
                     placeholder="Enter email"
                   />
                   <ErrorMessage name="email" component={TextError} />
@@ -74,14 +74,14 @@ const Login = () => {
                     type="password"
                     id="password"
                     name="password"
-                    className="p-2 rounded-lg w-1/3"
+                    className="p-2 rounded-lg w-1/2 md:w-2/3 placeholder:text-[12px]"
                     placeholder="Enter password"
                   />
                   <ErrorMessage name="email" component={TextError} />
                   <button
                     type="submit"
                     disabled={!formik.isValid || formik.isSubmitting}
-                    className="p-3 font-bold bg-navy text-white rounded-lg w-1/3 cursor-pointer "
+                    className="p-3 font-bold bg-navy text-white rounded-lg w-2/5 cursor-pointer text-xs "
                   >
                     Submit
                   </button>
@@ -90,11 +90,11 @@ const Login = () => {
             }}
           </Formik>
 
-          <p className="text-center">
+          <p className="text-center md:text-sm">
             Don't have an account?
             <Link
               to="/register"
-              className="underline decoration-solid text-blue"
+              className="underline decoration-solid text-blue "
             >
               Register
             </Link>
