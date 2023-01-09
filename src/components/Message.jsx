@@ -5,7 +5,7 @@ import { ChatContext } from "../contexts/ChatContext";
 let timeStamp = Date.now() / 1000;
 let date = new Date(timeStamp * 1000);
 let hours = date.getHours();
-let minutes = date.getMinutes();
+let minutes = "0" + date.getMinutes();
 let formattedTime = hours + ":" + minutes;
 // console.log(formattedTime);
 
@@ -33,36 +33,24 @@ const Message = ({ message }) => {
                 ? currentUser.photoURL
                 : data.user.photoURL
             }
-            className="w-8 h-8 rounded-full"
+            className="w-8 h-8 rounded-full m-1 object-cover"
           />
-          <span className="text-xs text-lightBlack pt-3 pr-1">
-            {formattedTime}
-          </span>
         </div>
-        <div className=" bg-white h-full flex items-center rounded-lg ml-5  ">
-          <p className="p-1">{message.text}</p>
+        <div className=" bg-white h-full flex items-center rounded-lg ml-5 flex-col ">
           {message.img && (
             <img
               src={message.img}
-              className="h-10 w-10 rounded-lg overflow-hidden"
+              className="h-80 w-80  object-contain overflow-hidden"
             />
           )}
+          <div className="flex flex-col  min-w-full	">
+            <p className="p-1 mb-1 ">{message.text} </p>
+            {/* <p className="text-[10px] text-lightBlack font-normal flex items-end  ">
+              {formattedTime}
+            </p> */}
+          </div>
         </div>
       </div>
-      {/* <div className="w-full h-5vh flex items-center p-5 flex-row-reverse  mb-10">
-        <div className=" flex flex-col items-center ">
-          <img src="src/images/woman.jpg" className="w-8 h-8 rounded-full" />
-          <span className="text-xs  text-blue-400 font-semibold ">
-            just now
-          </span>
-        </div>
-        <div className=" bg-white h-full flex items-center rounded-lg ml-5  ">
-          <span className="p-1">I am good what about you?</span>
-          <span className="text-xs text-lightBlack pt-3 pr-1">
-            {formattedTime}
-          </span>
-        </div>
-      </div> */}
     </>
   );
 };

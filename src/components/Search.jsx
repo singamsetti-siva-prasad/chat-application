@@ -88,7 +88,7 @@ const Search = () => {
     <div className="w-full">
       <input
         placeholder="search conversation"
-        className="w-full px-2 py-1 bg-slate-100 "
+        className="w-full px-2 py-1 placeholder:text-sm placeholder:font-light placeholder:text-gray "
         value={username}
         onKeyDown={handleKey}
         onChange={handleChange}
@@ -100,7 +100,10 @@ const Search = () => {
           onClick={handleSelect}
         >
           <div className="w-full h-full flex bg-slate-300 items-center p-2 hover:bg-slate-500">
-            <img src={user.photoURL} className="w-12 h-12 rounded-full" />
+            <img
+              src={user.photoURL}
+              className="w-12 h-12 rounded-full object-cover"
+            />
             <div className="ml-2">
               <h1 className="font-bold">{user.displayName}</h1>
             </div>

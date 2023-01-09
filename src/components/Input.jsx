@@ -68,7 +68,7 @@ const Input = () => {
     setImg(null);
   };
   return (
-    <div className="w-2/3 flex bg-white p-2 fixed bottom-0 left-1/3">
+    <div className="w-2/3 flex bg-white p-2 fixed bottom-0 left-1/3 sm:left-0 sm:w-full">
       <input
         placeholder="Type something here..."
         className="w-full border-none "
@@ -83,10 +83,10 @@ const Input = () => {
           onChange={(e) => setImg(e.target.files[0])}
         />
         <label htmlFor="file">
-          <img src="src/images/add-file.png" alt="" className="w-10 mr-2" />
+          <img src="src/images/add-file.png" alt="" className=" mr-2 h-8 w-8" />
         </label>
         <button
-          className="px-5 py-2 bg-slate-600 rounded-lg"
+          className="px-2 h-8 w-12 bg-slate-600 rounded-lg text-center text-xs font-medium"
           onClick={handleSend}
         >
           Send

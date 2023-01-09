@@ -5,7 +5,7 @@ import Search from "./Search";
 
 const Sidebar = () => {
   return (
-    <div className="w-1/3 border-r-2  ">
+    <div className="w-1/3  bg-white border-r-2 sm:w-full ">
       <Navbar />
       <Search />
       <Chats />
