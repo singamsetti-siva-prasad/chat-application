@@ -9,6 +9,7 @@ import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../contexts/AuthContext";
 import { ChatContext } from "../contexts/ChatContext";
+import AttachFileIcon from "@mui/icons-material/AttachFile";
 import { storage, db } from "../firebase";
 import { v4 as uuid } from "uuid";
 
@@ -68,10 +69,10 @@ const Input = () => {
     setImg(null);
   };
   return (
-    <div className="w-2/3 flex bg-white p-2 fixed bottom-0 left-1/3 sm:left-0 sm:w-full">
+    <div className="w-2/3 flex bg-white p-2 fixed bottom-0 left-1/3 sm:left-0 sm:w-full pr-5">
       <input
         placeholder="Type something here..."
-        className="w-full border-none "
+        className="w-full border-none p-3 "
         onChange={(e) => setText(e.target.value)}
         value={text}
       />
@@ -83,7 +84,7 @@ const Input = () => {
           onChange={(e) => setImg(e.target.files[0])}
         />
         <label htmlFor="file">
-          <img src="src/images/addFile.png" alt="" className=" mr-2 h-8 w-8" />
+          <AttachFileIcon className="mr-2" />
         </label>
         <button
           className="px-2 h-8 w-12 bg-button rounded-lg text-center text-xs font-medium"

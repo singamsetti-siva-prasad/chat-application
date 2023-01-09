@@ -9,7 +9,7 @@ const ConversationNav = () => {
 
   return (
     <div>
-      <div className="w-full h-10vh flex items-center justify-between p-1 pb-2 bg-secondary">
+      <div className="w-full h-10vh flex items-center justify-between p-1 pb-2 bg-primary">
         <div className="flex items-center ">
           <img
             src={data.user?.photoURL}

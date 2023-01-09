@@ -5,6 +5,7 @@ import { auth } from "../firebase";
 import * as Yup from "yup";
 import TextError from "../components/TextError";
 import { Link, useNavigate } from "react-router-dom";
+import logogreen from "../images/logogreen.png";
 
 const initialValues = {
   email: "",
@@ -42,10 +43,7 @@ const Login = () => {
       <div className="w-2/4 h-2/4 md:w-4/5">
         <div className="w-full h-full flex flex-col justify-evenly  bg-primary rounded-lg p-1">
           <div className="flex-4 h-1/4 flex flex-col justify-around items-center ">
-            <img
-              className="w-1/2 h-10 object-contain"
-              src="src/images/logogreen.png "
-            />
+            <img className="w-1/2 h-10 object-contain" src={logogreen} />
             <p className="font-bold text-center text-lg md:text-sm">Login</p>
             {haserror && (
               <span className="text-center text-red-600 ">

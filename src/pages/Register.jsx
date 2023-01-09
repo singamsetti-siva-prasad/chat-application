@@ -7,6 +7,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import TextError from "../components/TextError";
+import logogreen from "../images/logogreen.png";
 
 const initialValues = {
   userName: "",
@@ -85,10 +86,7 @@ const Register = () => {
       <div className="w-2/4 h-2/3 md:h-4/5 md:w-4/5  ">
         <div className="w-full h-full flex flex-col justify-around bg-primary rounded-lg p-1">
           <div className="flex flex-col items-center">
-            <img
-              className="w-1/2 h-10 object-contain"
-              src="src/images/logogreen.png "
-            />
+            <img className="w-1/2 h-10 object-contain" src={logogreen} />
             <p className="font-bold text-center text-lg md:text-sm">Register</p>
 
             {haserror && (
