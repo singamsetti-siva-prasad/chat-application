@@ -5,7 +5,7 @@ import { auth } from "../firebase";
 import * as Yup from "yup";
 import TextError from "../components/TextError";
 import { Link, useNavigate } from "react-router-dom";
-import logogreen from "../images/logogreen.png";
+import logogreen from "/images/logogreen.png";
 
 const initialValues = {
   email: "",

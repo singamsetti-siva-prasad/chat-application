@@ -7,7 +7,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import TextError from "../components/TextError";
-import logogreen from "../images/logogreen.png";
+import logogreen from "/images/logogreen.png";
 
 const initialValues = {
   userName: "",

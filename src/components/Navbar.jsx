@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { AuthContext } from "../contexts/AuthContext";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
-import logogreen from "../images/logogreen.png";
+import logogreen from "/images/logogreen.png";
 
 const Navbar = () => {
   const { currentUser } = useContext(AuthContext);
