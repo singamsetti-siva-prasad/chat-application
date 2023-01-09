@@ -46,7 +46,6 @@ const Search = () => {
   const handleSelect = async () => {
     //check if the currentUSer and user has chat between them in fireStore,
     // if does not exist we have to create
-    console.log("handling on handleSelect");
 
     const combinedID =
       currentUser.uid > user.uid

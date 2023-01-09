@@ -23,8 +23,6 @@ const Login = () => {
   const [error, setError] = useState("");
   const [haserror, setHasError] = useState(false);
   const onSubmit = async (values, submitProps) => {
-    console.log("Form data", values);
-
     const email = values.email;
     const password = values.password;
 
@@ -46,7 +44,7 @@ const Login = () => {
           <div className="flex-4 h-1/4 flex flex-col justify-around items-center ">
             <img
               className="w-1/2 h-10 object-contain"
-              src="src/images/logo-transparent-green.png "
+              src="src/images/logoGreen.png "
             />
             <p className="font-bold text-center text-lg md:text-sm">Login</p>
             {haserror && (
@@ -67,6 +65,7 @@ const Login = () => {
                     type="email"
                     id="email"
                     name="email"
+                    autoComplete="off"
                     className="p-2 rounded-lg w-1/2 md:w-2/3 placeholder:text-[12px]"
                     placeholder="Enter email"
                   />
@@ -77,6 +76,7 @@ const Login = () => {
                     name="password"
                     className="p-2 rounded-lg w-1/2 md:w-2/3 placeholder:text-[12px]"
                     placeholder="Enter password"
+                    autoComplete="off"
                   />
                   <ErrorMessage name="email" component={TextError} />
                   <button

@@ -83,7 +83,7 @@ const Input = () => {
           onChange={(e) => setImg(e.target.files[0])}
         />
         <label htmlFor="file">
-          <img src="src/images/add-file.png" alt="" className=" mr-2 h-8 w-8" />
+          <img src="src/images/addFile.png" alt="" className=" mr-2 h-8 w-8" />
         </label>
         <button
           className="px-2 h-8 w-12 bg-button rounded-lg text-center text-xs font-medium"

@@ -6,8 +6,7 @@ let timeStamp = Date.now() / 1000;
 let date = new Date(timeStamp * 1000);
 let hours = date.getHours();
 let minutes = "0" + date.getMinutes();
-let formattedTime = hours + ":" + minutes;
-// console.log(formattedTime);
+// let formattedTime = hours + ":" + minutes;
 
 const Message = ({ message }) => {
   const ref = useRef();

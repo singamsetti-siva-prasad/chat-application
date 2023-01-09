@@ -29,7 +29,6 @@ const Register = () => {
   const [haserror, setHasError] = useState(false);
 
   const onSubmit = async (values, submitProps) => {
-    console.log("Form data", values);
     setLoading(true);
 
     const displayName = values.userName;
@@ -74,7 +73,6 @@ const Register = () => {
       });
     } catch (err) {
       setError(err);
-      console.log("from bottom", err);
       setHasError(true);
       setLoading(false);
     }
@@ -89,7 +87,7 @@ const Register = () => {
           <div className="flex flex-col items-center">
             <img
               className="w-1/2 h-10 object-contain"
-              src="src/images/logo-transparent-green.png "
+              src="src/images/logoGreen.png "
             />
             <p className="font-bold text-center text-lg md:text-sm">Register</p>
 
@@ -113,6 +111,7 @@ const Register = () => {
                     name="userName"
                     className="p-2 rounded-lg w-2/5  md:w-3/4 placeholder:text-[12px] "
                     placeholder="User name"
+                    autoComplete="off"
                   />
                   <ErrorMessage name="email" component={TextError} />
                   <Field
@@ -121,6 +120,7 @@ const Register = () => {
                     name="email"
                     className="p-2 rounded-lg w-2/5 md:w-3/4 placeholder:text-[12px] "
                     placeholder="Enter email"
+                    autoComplete="off"
                   />
                   <ErrorMessage name="email" component={TextError} />
                   <Field
@@ -129,6 +129,7 @@ const Register = () => {
                     name="password"
                     className="p-2 rounded-lg w-2/5 md:w-3/4 placeholder:text-[12px] "
                     placeholder="Enter password"
+                    autoComplete="off"
                   />
                   <ErrorMessage name="email" component={TextError} />
                   <input
@@ -136,6 +137,7 @@ const Register = () => {
                     id="file"
                     accept=".jpg, .png"
                     className="p-2 rounded-lg w-2/5 md:w-3/4 placeholder:text-[12px]"
+                    autoComplete="off"
                     onChange={(e) => {
                       formik.setFieldValue("file", e.target.files[0]);
                     }}
