@@ -6,8 +6,6 @@ import { ActiveContext } from "../contexts/ActiveContext";
 
 const Home = () => {
   const { active, setActive } = useContext(ActiveContext);
-  const w = window.innerWidth < 767;
-  console.log(w);
 
   return (
     <div className="w-screen h-screen  flex items-center justify-center bg-gray">
